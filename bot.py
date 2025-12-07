@@ -23,7 +23,8 @@ async def find(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     query = " ".join(context.args)
 
-    url = f"https://search.wb.ru/exactmatch/ru/common/v4/search?query={qu
+    url = f"https://search.wb.ru/exactmatch/ru/common/v4/search?query={query}"
+
     try:
         data = requests.get(url).json()
 
